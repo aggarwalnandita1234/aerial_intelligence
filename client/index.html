@@ -1,0 +1,27 @@
+<html ng-app="soybean_app">
+<head>
+  <title>aerial_intelligence</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <!-- require angular -->
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-route.min.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular-messages.js"></script>
+
+
+  <script type='text/javascript'>
+  		var soybean_app = angular.module('soybean_app', ['ngRoute']);
+  </script>
+  <script type='text/javascript' src="./js/config/routes.js">  </script>
+  <script type='text/javascript' src="./js/controller/statesController.js">  </script>
+  <script type='text/javascript' src="./js/model/stateFactory.js">  </script>
+</head>
+  <body>
+      <div ng-app="soybean_app">
+          <a href="#/"></a>
+
+          <div ng-view=""></div>
+      </div>
+    </body>
+</html>

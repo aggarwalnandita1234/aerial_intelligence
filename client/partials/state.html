@@ -1,0 +1,46 @@
+<div ng-controller = "statesController" id="content" class="col-md-10 col-md-offset-2" class="active">
+
+	<div id="states">
+		<h3 class="active">2015 SoyBean production State Statistics in USA</h3>
+
+
+			<table class="table table-striped" width = 200px>
+				<thead>
+					<tr>
+						<th>State name</th>
+						<th>Annual production (BU)</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="state in states ">
+						<td>{{state}}</td>
+						<td>{{productions[$index]}}</td>
+					</tr>
+				</tbody>
+			</table>
+
+
+			<h3 class = "text-default" class="col-md-10 col-md-offset-4" class="active">Please enter a state name (in capitals) to get county-rain data</h3>
+			<form>
+				<input ng-model='state.name' type='text'>
+				<input style="display: inline-block;" class="btn btn-info" type="submit" value ="Enter the state name" ng-click="enterSelection()">
+			</form>
+	</div>
+	<div>
+			<table class="table table-striped" width = 200px>
+				<thead>
+					<tr>
+						<th>County name</th>
+						<th>Precipitation volume for last 3 hours(mm)</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="counties_rain in counties_rains">
+						<td>{{counties_rain.name}}</td>
+						<td>{{counties_rain.rain["3h"]}}</td>
+					</tr>
+				</tbody>
+			</table>
+	</div>
+</div>
+
